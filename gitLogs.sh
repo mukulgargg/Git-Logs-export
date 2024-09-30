@@ -1,9 +1,9 @@
-for d in /Users/mukulgarg/scoreMe/*/.git; do
+for d in /path/to/BaseDIR/*/.git; do
     r=${d%.git}
     echo "$r"
     repo_name=$(basename "$r")
     git -C "$r" log \
-        --committer=mukul.garg@scoreme.in \
+        --committer=<yourEmailid@domain.in> \
         --after=$1 \
         --before=$2 \
         --reverse \
